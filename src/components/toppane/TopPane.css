@@ -1,0 +1,8 @@
+body {
+    font-family: 'VT323', monospace;
+    overflow: hidden;
+}
+
+.title { 
+    user-select: none;
+}

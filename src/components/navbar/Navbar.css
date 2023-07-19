@@ -1,0 +1,10 @@
+.button-class {
+    transition : 0.3s;
+    background-color: 'rgb(58,63,71)';
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-class:hover{
+    color: white;
+}
