@@ -27,7 +27,7 @@ const About = () => {
                 <h3 className='fs-4'>Hi there! I'm Farid Firoz, a Front-End Developer based in Perth, Australia.</h3>
                 <h3 className='fs-4'>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect (haha), performant experiences.</h3>
               </Col>
-              <Col xs={12} sm={12} md={12} lg={4} xl={4} className='h-100 m-auto order-lg-1'>
+              <Col xs={12} sm={12} md={12} lg={8} xl={4} xxl={2} className='h-100 m-auto order-lg-1'>
                 <img src={image} alt="Farid Firoz" className="rounded-circle img-fluid" style={{
                   maxWidth: '100%',
                   height: 'auto',
