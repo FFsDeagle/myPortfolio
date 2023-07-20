@@ -3,10 +3,12 @@ import { RootState, AppThunk } from '../../app/store';
 
 export interface NavbarState {
     value: string;
+    resize: any;
 }
 
 export const initialState: NavbarState = {
     value: '/about',
+    resize: null,
 }
 
 export const navbarSlice = createSlice({
@@ -15,6 +17,9 @@ export const navbarSlice = createSlice({
     reducers: {
         changePage: (state, action: PayloadAction<string>) => {
             state.value = action.payload;
+        },
+        resizeWindow: (state, action: PayloadAction<any>) => {
+            state.resize = action.payload;
         }
     }
 })

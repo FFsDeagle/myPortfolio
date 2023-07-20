@@ -9,6 +9,7 @@ const TopPane = () => {
   const [titleDisplay, setTitleDisplay] = useState('');
   const [iterationTime, setIterationTime] = useState(20);
   const [shouldSetIterationTime, setShouldSetIterationTime] = useState(false);
+  const navbarResize = useAppSelector(state => state.navbar.resize);
 
   useEffect(() => {
     switch (navbarValue) {
@@ -22,6 +23,10 @@ const TopPane = () => {
         break;
       case 'Contact':
         setTitle('Contact..|');
+          reset();
+        break;
+      case 'Menu':
+        setTitle('Menu..|');
           reset();
         break;
       default:
@@ -72,20 +77,19 @@ const TopPane = () => {
   return (
     <Container
       fluid
-      className='root-container'
+      className='sticky-element'
       style={{
         height: '6.5rem',
-        marginLeft: '20rem',
-        width: 'calc(100vw - 20rem)',
+        marginLeft: navbarResize ? '0' : '20rem',
+        width: navbarResize ? '' : 'calc(100vw - 20rem)',
         backgroundColor: 'rgb(4, 7, 9)',
-        position: 'absolute'
       }}
     >
       <Row>
         <Col
-          className='d-flex w-100'
+          className='d-flex w-100 pt-2'
         >
-          <div className='title fs-1 text-success text-start p-4'>
+          <div className='title fs-2 text-success text-start p-4 my-auto'>
             {titleDisplay}
           </div>
         </Col>

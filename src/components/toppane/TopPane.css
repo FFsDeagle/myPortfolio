@@ -1,6 +1,6 @@
 body {
     font-family: 'VT323', monospace;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .title { 

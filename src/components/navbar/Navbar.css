@@ -5,6 +5,15 @@
     cursor: pointer;
 }
 
+.navbar {
+    display: flex;
+    transform: translateY(-6.5rem);
+}
+
 .button-class:hover{
     color: white;
+}
+
+.hide {
+    display: none;
 }
