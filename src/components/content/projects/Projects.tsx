@@ -5,14 +5,17 @@ import { useAppSelector } from '../../../app/hooks';
 const Projects = () => {
     const resize = useAppSelector((state) => state.navbar.resize)
     return (
-        <Container className='about-wrapper' fluid style={{
+        <Container className='projects-wrapper' fluid style={{
             marginLeft: resize ? '0' : '20rem',
             width: resize ? '' : 'calc(100vw - 20rem)',
             backgroundColor: 'rgb(8, 13, 19)',
             height: '100vh',
             paddingBottom: '10rem',
+            paddingRight: '0',
+            paddingLeft: '0',
           }}>
-                <Row>
+            <Row className='flex-lg-row' lg={12}>
+                <Row className='row'>
                     <Col className='d-flex w-100'>
                         <div className='title fs-4 text-success text-start m-4 p-4 border border-light rounded w-100'>
                             <Row>
@@ -21,7 +24,7 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='row'>
                     <Col className='d-flex w-100'>
                         <div className='title fs-4 text-success text-start m-4 p-4 border border-light rounded w-100'>
                             <Row>
@@ -35,7 +38,7 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='row'>
                     <Col className='d-flex w-100'>
                         <div className='title fs-4 text-success text-start m-4 p-4 border border-light rounded w-100'>
                             <Row>
@@ -44,7 +47,7 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='row'>
                     <Col className='d-flex w-100'>
                         <div className='title fs-4 text-success text-start m-4 p-4 border border-light rounded w-100'>
                             <Row>
@@ -58,7 +61,8 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </Row>
+        </Container>
     )
 };
 

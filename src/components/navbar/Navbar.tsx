@@ -173,10 +173,12 @@ const Navbar = () => {
                                         <Button 
                                         onClick={() => {
                                             setChangeMenu(true);
-                                            dispatch({ type: 'navbar/changePage', payload: items.name });
                                             if(items.name === 'Github') {
+                                                dispatch({ type: 'navbar/changePage', payload: prevPage });
                                                 window.open('https://github.com/FFsDeagle/', '_blank');
                                                 return;
+                                            }else {
+                                                dispatch({ type: 'navbar/changePage', payload: items.name });
                                             }
                                             navigate(items.link);
                                         }} variant='secondary' className='button-class mt-2 fs-4 border-1 w-100 rounded border-light'>{items?.name} {items?.icon}</Button>
