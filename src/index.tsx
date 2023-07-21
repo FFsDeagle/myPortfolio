@@ -7,6 +7,8 @@ import Contact from './components/content/contact/Contact';
 import TopPane from './components/toppane/TopPane';
 import Root from './components/content/Root';
 import Projects from './components/content/projects/Projects';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
