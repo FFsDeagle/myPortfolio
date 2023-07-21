@@ -29,6 +29,10 @@ const TopPane = () => {
         setTitle('Menu..|');
           reset();
         break;
+      case '404 Not Found':
+        setTitle('404 Not Found..|');
+          reset();
+        break;
       default:
         setTitle('Welcome to myPortfolio..|');
           reset();

@@ -9,6 +9,8 @@ import Root from './components/content/Root';
 import Projects from './components/content/projects/Projects';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import NotFound from './components/content/notfound/NotFound';
+import RootNF from './components/content/RootNF';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -31,7 +33,11 @@ const router = createBrowserRouter([
         element: <Contact />
       }
     ]
-  }
+  },
+  {
+    path: '*',
+    element: <RootNF />
+  },
 ]);
 
 root.render(
