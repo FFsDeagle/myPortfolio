@@ -6,6 +6,12 @@ import './Root.css'
 
 const Root = () => {
 
+  // set document name as myPortfolio..
+
+  useEffect(() => { 
+    document.title = 'myPortfolio by Farid Firoz';
+  },[])
+
     const navigate = useNavigate();
 
     useEffect(() => {

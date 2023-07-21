@@ -30,8 +30,11 @@ const Projects = () => {
                             <Row>
                             <div className='p-1 pt-0 mb-2 text-light'>KWF (Kaleidoscope World of Fashion)</div>
                             <div className='code-container border rounded'>
-                                <div className="code" onClick={() => console.log('clicked')}>
-                                    www.houseofbelleau.com
+                                <div className="code">
+                                    Project type:
+                                </div>
+                                <div className="code">
+                                    - Website
                                 </div>
                                 </div>
                             </Row>
@@ -53,7 +56,7 @@ const Projects = () => {
                             <Row>
                             <div className='p-1 pt-0 mb-2 text-light'>House of Belle</div>
                             <div className='code-container border rounded'>
-                                <div className="code" onClick={() => console.log('clicked')}>
+                                <div className="code" style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.houseofbelleau.com/', '_blank')}>
                                     www.houseofbelleau.com
                                 </div>
                                 </div>
