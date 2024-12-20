@@ -29,6 +29,14 @@ const TopPane = () => {
         setTitle('Menu..|');
           reset();
         break;
+      case 'Interactive Grid':
+        setTitle('Interactive Grid..|');
+          reset();
+        break;
+      case '3D Visualizer':
+        setTitle('Interactive Grid..|');
+          reset();
+        break;
       case '404 Not Found':
         setTitle('404 Not Found..|');
           reset();

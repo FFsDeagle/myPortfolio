@@ -95,7 +95,17 @@ const Navbar = () => {
             name: 'Github',
             link: '/github',
             icon: <FontAwesomeIcon icon={faGithub} />
-        }
+        },
+        {
+            index: 4,
+            name: 'Interactive Grid',
+            link: '/interactive-grid',
+        },
+        // {
+        //     index: 5,
+        //     name: '3D Visualizer',
+        //     link: '/ThreejsVisualizer',
+        // }
     ]
 
     return (

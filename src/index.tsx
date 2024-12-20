@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import NotFound from './components/content/notfound/NotFound';
 import RootNF from './components/content/RootNF';
+import InteractiveGrid from './components/content/interactivegrid/InteractiveGrid';
+import ThreejsVisualizer from './components/content/ThreejsVisualizer/ThreejsVisualizer';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -31,7 +33,15 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
-      }
+      },
+      {
+        path: '/interactive-grid',
+        element: <InteractiveGrid />
+      },
+      {
+        path: '/ThreejsVisualizer',
+        element: <ThreejsVisualizer />
+      },
     ]
   },
   {

@@ -6,8 +6,6 @@ import { useAppSelector } from '../../../app/hooks';
 const About = () => {
 
   const resize = useAppSelector(state => state.navbar.resize);
-  console.log(resize)
-
   return (
     <Container className='about-wrapper' fluid style={{
       marginLeft: resize ? '0' : '20rem',
