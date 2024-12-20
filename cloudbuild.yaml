@@ -1,17 +1,18 @@
 steps:
+  # Install dependencies
   - name: "gcr.io/cloud-builders/npm"
     args: ["install"]
 
+  # Build your application
   - name: "gcr.io/cloud-builders/npm"
     args: ["run", "build"]
 
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: "bash"
-    args:
-      [
-        "-c",
-        "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy",
-      ]
+  # Deploy to App Engine
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "--quiet", "--project=$PROJECT_ID"]
+    # If you have multiple services or a specific app.yaml location:
+    # args: ["app", "deploy", "path/to/app.yaml", "--quiet", "--project=$PROJECT_ID"]
+
 timeout: "1600s"
 options:
   logging: CLOUD_LOGGING_ONLY
