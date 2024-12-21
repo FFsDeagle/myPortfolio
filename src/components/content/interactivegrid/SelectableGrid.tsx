@@ -83,7 +83,7 @@ const SelectableGrid = ({ rows, cols, lives, setLives, setLevel, level }: Select
     };
 
     const handleMouseUp = (item: GridItemProps) => {
-        // End the selection mode
+        // End the selection mode which enables input
         setIsSelecting(false);
     };
 
